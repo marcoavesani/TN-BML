@@ -11848,26 +11848,6 @@ a.anchor-link {
 </head>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-<style type="text/css">
-//div.output_wrapper {
-//  margin-top: 0px;
-//}
-.input_hidden {
-  display: none;
-//  margin-top: 5px;
-}
-</style>
-
-<script>
-$(document).ready(function(){
-  $(".output_wrapper").click(function(){
-      $(this).prev('.input_hidden').slideToggle();
-  });
-})
-</script>
-
 <body>
 
 
@@ -11879,25 +11859,6 @@ $(document).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Exam-of-Bayesian-Machine-Learning:">Exam of Bayesian Machine Learning:<a class="anchor-link" href="#Exam-of-Bayesian-Machine-Learning:">&#194;&#182;</a></h1><h1 id="Comparison-between-Supervised-Learning-with-Quantum-Inspired-Tensor-Network,-SVM-and-Naive-Based">Comparison between Supervised Learning with Quantum-Inspired Tensor Network, SVM and Naive Based<a class="anchor-link" href="#Comparison-between-Supervised-Learning-with-Quantum-Inspired-Tensor-Network,-SVM-and-Naive-Based">&#194;&#182;</a></h1><h2 id="Luca-Calderaro,-Marco-Avesani">Luca Calderaro, Marco Avesani<a class="anchor-link" href="#Luca-Calderaro,-Marco-Avesani">&#194;&#182;</a></h2><h3 id="18/07/2017">18/07/2017<a class="anchor-link" href="#18/07/2017">&#194;&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#194;&#182;</a></h1><ol>
-<li>Tensor Network Notation</li>
-<li>Matrix Product States</li>
-<li>Supervised Learning with Quantum-Inspired Tensor Networks</li>
-<li>Classical Supervised Learning Algorithms</li>
-<li>Support Vector Machine</li>
-<li>Naive Bayes</li>
-<li>Code implementation</li>
-<li>Final Summary</li>
-<li>Conclusions</li>
-</ol>
-
 </div>
 </div>
 </div></section></section><section><section>
@@ -11920,7 +11881,6 @@ In tensor network notation (TNN) a single tensor is simply represented by a geom
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
@@ -11930,8 +11890,6 @@ In tensor network notation (TNN) a single tensor is simply represented by a geom
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12068,7 +12026,6 @@ QmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
@@ -12078,8 +12035,6 @@ QmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12360,7 +12315,6 @@ AABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
@@ -12370,8 +12324,6 @@ AABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12512,7 +12464,6 @@ PwKBX5D+EQj8gvSPQOCX/wO1h2dx17nwzQAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
@@ -12522,8 +12473,6 @@ PwKBX5D+EQj8gvSPQOCX/wO1h2dx17nwzQAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12742,19 +12691,16 @@ energy states of physically realistic systems.</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c">%%latex</span>
-<span class="s">$</span><span class="nb">|</span><span class="nv">\psi\rangle</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_{j_</span><span class="m">1</span><span class="nb"> ... j_N} C_{j_</span><span class="m">1</span><span class="nb"> ... j_N} |j_</span><span class="m">1</span><span class="nv">\rangle</span><span class="nb"> </span><span class="nv">\dotsb</span><span class="nb"> |j_N</span><span class="nv">\rangle</span><span class="s">$</span>
+<span class="s">$</span><span class="nb">|</span><span class="nv">\psi</span><span class="nb">&gt; </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_{j_</span><span class="m">1</span><span class="nb"> ... j_N} C_{j_</span><span class="m">1</span><span class="nb"> ... j_N} |j_</span><span class="m">1</span><span class="nb">&gt; </span><span class="nv">\dotsb</span><span class="nb"> |j_N&gt;</span><span class="s">$</span>
 </pre></div>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12769,7 +12715,7 @@ energy states of physically realistic systems.</p>
 
 
 <div class="output_latex output_subarea ">
-$|\psi\rangle = \sum_{j_1 ... j_N} C_{j_1 ... j_N} |j_1\rangle \dotsb |j_N\rangle$
+$|\psi> = \sum_{j_1 ... j_N} C_{j_1 ... j_N} |j_1> \dotsb |j_N>$
 </div>
 
 </div>
@@ -12798,7 +12744,6 @@ MPS consists of approximating the above state as a contraction of N tensors of r
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
@@ -12808,8 +12753,6 @@ MPS consists of approximating the above state as a contraction of N tensors of r
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -12932,7 +12875,6 @@ IWIwghFCiBiMYIQQIuY/tfI4U/bsWwkAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
@@ -12942,8 +12884,6 @@ IWIwghFCiBiMYIQQIuY/tfI4U/bsWwkAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -13508,7 +13448,6 @@ QRBEk1BtgSAIgiCIJqHaAkEQBEEQTUK1BYIgCIIgmoRqCwRBEARBNAnVFgiCIAiCaBKqLRAEQRAE
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
@@ -13518,8 +13457,6 @@ QRBEk1BtgSAIgiCIJqHaAkEQBEEQTUK1BYIgCIIgmoRqCwRBEARBNAnVFgiCIAiCaBKqLRAEQRAE
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -13679,7 +13616,6 @@ Then we can use the MPS form to take advantage of this by truncating the $\lambd
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
@@ -13690,8 +13626,6 @@ Then we can use the MPS form to take advantage of this by truncating the $\lambd
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -13729,7 +13663,6 @@ Tensor networks are also adaptive: dimensions of tensor indices internal to the 
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
@@ -13739,8 +13672,6 @@ Tensor networks are also adaptive: dimensions of tensor indices internal to the 
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -13940,7 +13871,6 @@ RjHmAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
@@ -13951,8 +13881,6 @@ RjHmAAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -13987,19 +13915,16 @@ A simple choice</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c">%%latex</span>
-<span class="s">$</span><span class="nv">\phi</span><span class="nb">^{s_i}</span><span class="o">(</span><span class="nb">x_i</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\left</span><span class="o">[</span><span class="nv">\cos\left</span><span class="o">(</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}x_i</span><span class="nv">\right</span><span class="o">)</span><span class="nb">, </span><span class="nv">\sin\left</span><span class="o">(</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}x_i</span><span class="nv">\right</span><span class="o">)</span><span class="nv">\right</span><span class="o">]</span><span class="s">$</span>
+<span class="s">$</span><span class="nv">\phi</span><span class="nb">^{s_i}</span><span class="o">(</span><span class="nb">x_i</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="o">[</span><span class="nv">\cos</span><span class="o">(</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}x_i</span><span class="o">)</span><span class="nb">, </span><span class="nv">\sin</span><span class="o">(</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}x_i</span><span class="o">)]</span><span class="s">$</span>
 </pre></div>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -14014,7 +13939,7 @@ A simple choice</p>
 
 
 <div class="output_latex output_subarea ">
-$\phi^{s_i}(x_i) = \left[\cos\left(\frac{\pi}{2}x_i\right), \sin\left(\frac{\pi}{2}x_i\right)\right]$
+$\phi^{s_i}(x_i) = [\cos(\frac{\pi}{2}x_i), \sin(\frac{\pi}{2}x_i)]$
 </div>
 
 </div>
@@ -14024,7 +13949,6 @@ $\phi^{s_i}(x_i) = \left[\cos\left(\frac{\pi}{2}x_i\right), \sin\left(\frac{\pi}
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
@@ -14034,8 +13958,6 @@ $\phi^{s_i}(x_i) = \left[\cos\left(\frac{\pi}{2}x_i\right), \sin\left(\frac{\pi}
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -14325,7 +14247,6 @@ The choice of this particular feature map translates the original problem in a s
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
@@ -14335,8 +14256,6 @@ The choice of this particular feature map translates the original problem in a s
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -14701,7 +14620,6 @@ CFNAuicIgjAFpHuCIAhTQLonCIIwBaR7giAIU0C6JwiCMAWke4IgCFNAuicIgjAFpHuCIAhT8P8B
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
@@ -14712,8 +14630,6 @@ CFNAuicIgjAFpHuCIAhTQLonCIIwBaR7giAIU0C6JwiCMAWke4IgCFNAuicIgjAFpHuCIAhT8P8B
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -14747,7 +14663,6 @@ $f^l(\mathbf{x}) = W^l \cdot \Phi(\mathbf{x})$
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
@@ -14757,8 +14672,6 @@ $f^l(\mathbf{x}) = W^l \cdot \Phi(\mathbf{x})$
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -15076,19 +14989,16 @@ SyGEEGq6/g9jTm3NmrBULAAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c">%%latex</span>
-<span class="s">$</span><span class="nb">W_{s_</span><span class="m">1</span><span class="nb"> </span><span class="nv">\dotsb</span><span class="nb"> s_N}^l </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_{</span><span class="o">[</span><span class="nv">\alpha</span><span class="o">]</span><span class="nb">} A_{s_</span><span class="m">1</span><span class="nb">}^{</span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">1</span><span class="nb">} A_{s_</span><span class="m">2</span><span class="nb">}^{</span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">1</span><span class="nb"> </span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">2</span><span class="nb">} </span><span class="nv">\dotsb</span><span class="nb"> A_{s_i}^{l; </span><span class="nv">\alpha</span><span class="nb">_{i</span><span class="o">-</span><span class="m">1</span><span class="nb">} </span><span class="nv">\alpha</span><span class="nb">_{i}} </span><span class="nv">\dotsb</span><span class="nb"> A_{s_N}^{</span><span class="nv">\alpha</span><span class="nb">_{N</span><span class="o">-</span><span class="m">1</span><span class="nb">}}</span><span class="s">$</span>
+<span class="s">$</span><span class="nb">W_{s_</span><span class="m">1</span><span class="nb"> </span><span class="nv">\dotsb</span><span class="nb"> s_N}^l </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_{</span><span class="o">[</span><span class="nv">\alpha</span><span class="o">]</span><span class="nb">} A_{s_</span><span class="m">1</span><span class="nb">}^{</span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">1</span><span class="nb">} A_{s_</span><span class="m">2</span><span class="nb">}^{</span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">1</span><span class="nb"> </span><span class="nv">\alpha</span><span class="nb">_</span><span class="m">2</span><span class="nb">} </span><span class="nv">\dotsb</span><span class="nb"> A_{s_i}^{l; </span><span class="nv">\alpha</span><span class="nb">_i </span><span class="nv">\alpha</span><span class="nb">_{i</span><span class="o">+</span><span class="m">1</span><span class="nb">}} </span><span class="nv">\dotsb</span><span class="nb"> A_{s_N}^{</span><span class="nv">\alpha</span><span class="nb">_N}</span><span class="s">$</span>
 </pre></div>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -15103,7 +15013,7 @@ SyGEEGq6/g9jTm3NmrBULAAAAABJRU5ErkJggg==
 
 
 <div class="output_latex output_subarea ">
-$W_{s_1 \dotsb s_N}^l = \sum_{[\alpha]} A_{s_1}^{\alpha_1} A_{s_2}^{\alpha_1 \alpha_2} \dotsb A_{s_i}^{l; \alpha_{i-1} \alpha_{i}} \dotsb A_{s_N}^{\alpha_{N-1}}$
+$W_{s_1 \dotsb s_N}^l = \sum_{[\alpha]} A_{s_1}^{\alpha_1} A_{s_2}^{\alpha_1 \alpha_2} \dotsb A_{s_i}^{l; \alpha_i \alpha_{i+1}} \dotsb A_{s_N}^{\alpha_N}$
 </div>
 
 </div>
@@ -15122,7 +15032,6 @@ $W_{s_1 \dotsb s_N}^l = \sum_{[\alpha]} A_{s_1}^{\alpha_1} A_{s_2}^{\alpha_1 \al
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
@@ -15132,8 +15041,6 @@ $W_{s_1 \dotsb s_N}^l = \sum_{[\alpha]} A_{s_1}^{\alpha_1} A_{s_2}^{\alpha_1 \al
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -15355,7 +15262,6 @@ BgAAAEQJZG4AAABAlEDmBgAAAETJ/wE0GEgimEy+cgAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
@@ -15366,8 +15272,6 @@ BgAAAEQJZG4AAABAlEDmBgAAAETJ/wE0GEgimEy+cgAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -15405,13 +15309,12 @@ $C = \frac{1}{2} \sum_{n=1}^{N_T} \sum_l (f^l(\mathbf{x}_n) - \delta^l_{L_n})^2$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 \begin{equation*}
-B^{'l} = B^l + \alpha\Delta B^l
+B^{'l} = B^l + \Delta B^l
 \end{equation*}
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
@@ -15425,8 +15328,6 @@ B^{'l} = B^l + \alpha\Delta B^l
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -15454,7 +15355,6 @@ B^{'l} = B^l + \alpha\Delta B^l
 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
@@ -15464,8 +15364,6 @@ B^{'l} = B^l + \alpha\Delta B^l
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -16295,7 +16193,6 @@ K99PExy25gAAAABJRU5ErkJggg==
 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
@@ -16305,8 +16202,6 @@ K99PExy25gAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -16864,7 +16759,7 @@ AECEjAgAAMBCRgQAACAi+n+Rulcj48XdVwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$\begin{equation} \phi(x_i) = \left[\cos\left(\frac{\pi}{2}x_i\right), \sin\left(\frac{\pi}{2}x_i\right)\right] \end{equation}$$
+$$\begin{equation} \phi(x_i) = [\cos(\frac{\pi}{2}x_i), \sin(\frac{\pi}{2}x_i)] \end{equation}$$
 </div>
 </div>
 </div>
@@ -16881,7 +16776,7 @@ $$\begin{equation} \phi(x_i) = \left[\cos\left(\frac{\pi}{2}x_i\right), \sin\lef
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$\begin{equation} \phi^{s_j}(x_i) = \sum_{p=0}^{d-1} \binom{d-1}{p} \cos^{d-s_j}\left(\frac{\pi}{2}x_i\right) \sin^{s_j-1}\left(\frac{\pi}{2}x_i\right) \end{equation}$$
+$$\begin{equation} \phi^{s_j}(x_i) = \sum_{p=0}^{d-1} \left( d-1, p \right) \cos^{d-s_j}(\frac{\pi}{2}x_i) \sin^{s_j-1}(\frac{\pi}{2}x_i) \end{equation}$$
 </div>
 </div>
 </div></section></section><section><section>
@@ -16910,7 +16805,7 @@ $$\begin{equation} \phi^{s_j}(x_i) = \sum_{p=0}^{d-1} \binom{d-1}{p} \cos^{d-s_j
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt;div style= "float:right;position: relative; top: 0px;"&gt;
+<p>&lt;div markdown style= "float:right;position: relative; top: 0px;"&gt;
 <img src="./images/svm.png" alt="svm" title="Logo Title Text 1">
 &lt;/div&gt;
 Is a supervised learning algorithm mainly used for classification.</p>
@@ -16924,7 +16819,7 @@ Is a supervised learning algorithm mainly used for classification.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt;div style= "float:right;position: relative; top: 0px;"&gt;
+<p>&lt;div markdown style= "float:right;position: relative; top: 0px;"&gt;
 <img src="./images/svm.png" alt="svm" title="Logo Title Text 1">
 &lt;/div&gt;</p>
 <p>For example,  consider the binary case with $\vec{x}_i$ data points and $y_i=\pm 1$ labels</p>
@@ -16939,7 +16834,7 @@ Is a supervised learning algorithm mainly used for classification.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt;div style= "float:right;position: relative; top: 0px;"&gt;
+<p>&lt;div markdown style= "float:right;position: relative; top: 0px;"&gt;
 <img src="./images/svm.png" alt="svm" title="Logo Title Text 1">
 &lt;/div&gt;</p>
 <p>The optimal decision hyperplane is the one that maximizes:</p>
@@ -17007,7 +16902,6 @@ and regulates how far the influence of a single training example reaches</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
@@ -17017,8 +16911,6 @@ and regulates how far the influence of a single training example reaches</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -17588,7 +17480,6 @@ P(y_i | \vec x)=kP(y_i)\prod_j P( x_j |  y_i )
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
@@ -17598,8 +17489,6 @@ P(y_i | \vec x)=kP(y_i)\prod_j P( x_j |  y_i )
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -19001,7 +18890,7 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 <li>Small computational complexity</li>
 </ul>
 <h2 id="Cons-of-Naive-Bayes:">Cons of Naive Bayes:<a class="anchor-link" href="#Cons-of-Naive-Bayes:">&#194;&#182;</a></h2><ul>
-<li>By nature, it cannot grasp correlations in the parameters</li>
+<li>By nature, it cannot grasp corrlations in the parameters</li>
 </ul>
 
 </div>
@@ -19025,7 +18914,6 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
@@ -19062,11 +18950,8 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 </div>
 </div>
 
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
@@ -19145,8 +19030,6 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 </div>
 </div>
 
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -19166,7 +19049,6 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
@@ -19196,8 +19078,6 @@ Other choices can be the Bernoulli pdf or multivariate pdf..</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -19875,7 +19755,6 @@ In this way we reduce the computation complexity and reduce the chances of overf
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
@@ -19896,10 +19775,7 @@ In this way we reduce the computation complexity and reduce the chances of overf
 </div>
 
 </div>
-
-</div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
@@ -19916,8 +19792,6 @@ In this way we reduce the computation complexity and reduce the chances of overf
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -20580,7 +20454,6 @@ r1AoFN2M/w98oAPCwSROgwAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
@@ -20595,8 +20468,6 @@ r1AoFN2M/w98oAPCwSROgwAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -21302,7 +21173,6 @@ A2FX7trY2Nh0MjpDVo+NjY2NjQnb8NvY2Nh0MmzDb2NjY9PJsA2/jY2NTSfDNvw2NjY2nQzb8NvY
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
@@ -21317,8 +21187,6 @@ A2FX7trY2Nh0MjpDVo+NjY2NjQnb8NvY2Nh0MmzDb2NjY9PJsA2/jY2NTSfDNvw2NjY2nQzb8NvY
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -21951,7 +21819,6 @@ oVD0MZThVygUij6GMvwKhULRx/j/T6/0p49N1M8AAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
@@ -21962,8 +21829,6 @@ oVD0MZThVygUij6GMvwKhULRx/j/T6/0p49N1M8AAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -22041,7 +21906,6 @@ The radius of the first goes from 0 to 0.5, while the second goes from 0.5 to 1.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
@@ -22080,8 +21944,6 @@ The radius of the first goes from 0 to 0.5, while the second goes from 0.5 to 1.
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -22691,7 +22553,6 @@ RU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
@@ -22706,8 +22567,6 @@ RU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -23468,7 +23327,6 @@ Again, the parameter $C=4$ and $\gamma=4$</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
@@ -23483,8 +23341,6 @@ Again, the parameter $C=4$ and $\gamma=4$</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -24243,7 +24099,6 @@ AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
@@ -24258,8 +24113,6 @@ AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -24951,7 +24804,6 @@ AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
@@ -24962,8 +24814,6 @@ AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -25041,7 +24891,6 @@ They're both centered around 0.5. The radius of the first goes from 0 to 0.5, wh
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
@@ -25081,8 +24930,6 @@ They're both centered around 0.5. The radius of the first goes from 0 to 0.5, wh
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -25698,7 +25545,6 @@ pY1dsfk3quUAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
@@ -25713,8 +25559,6 @@ pY1dsfk3quUAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -26486,7 +26330,6 @@ Again, the parameter $C=4$ and $\gamma=6$</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
@@ -26500,8 +26343,6 @@ Again, the parameter $C=4$ and $\gamma=6$</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -26524,7 +26365,6 @@ Again, the parameter $C=4$ and $\gamma=6$</p>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
@@ -26538,8 +26378,6 @@ Again, the parameter $C=4$ and $\gamma=6$</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -27358,7 +27196,6 @@ M+sgh7uZWQc53M3MOsjhbmbWQQ53M7MOcribmXXQv8CRB3vU48i5AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
@@ -27373,8 +27210,6 @@ M+sgh7uZWQc53M3MOsjhbmbWQQ53M7MOcribmXXQv8CRB3vU48i5AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -28095,7 +27930,6 @@ EP8f8tC948hrJAkAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
@@ -28106,8 +27940,6 @@ EP8f8tC948hrJAkAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -28175,7 +28007,6 @@ EP8f8tC948hrJAkAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
@@ -28215,8 +28046,6 @@ EP8f8tC948hrJAkAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -28993,7 +28822,6 @@ x3GcGsTF3XEcpwZxcXccx6lBXNwdx3FqEBd3x3GcGuR/Yn7/le2jIXUAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
@@ -29008,8 +28836,6 @@ x3GcGsTF3XEcpwZxcXccx6lBXNwdx3FqEBd3x3GcGuR/Yn7/le2jIXUAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -29983,7 +29809,6 @@ Again, the parameter $C=4$ and $\gamma=15$</p>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
@@ -29998,8 +29823,6 @@ Again, the parameter $C=4$ and $\gamma=15$</p>
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -31211,7 +31034,6 @@ AABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
@@ -31226,8 +31048,6 @@ AABJRU5ErkJggg==
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -31958,7 +31778,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
@@ -31969,8 +31788,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -32038,7 +31855,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
@@ -32048,8 +31864,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 <div class="output_wrapper">
@@ -32129,7 +31943,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
@@ -32139,8 +31952,6 @@ Qz9EZtwzZMiQoR8iM+4ZMmTI0A+RGfcMGTJk6If4/yYIESU4zI8CAAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div>
-
 </div>
 
 </div></section></section>
